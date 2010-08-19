@@ -1,0 +1,14 @@
+.DS_Store
+db/*.db
+db/*.sqlite3
+db/schema.rb
+db/sphinx/development
+log/*.log
+log/*.pid
+tmp
+config/database.yml
+config/*.sphinx.conf
+public/system
+public/javascripts/less_routes.js
+test/public/system
+vendor/rails
