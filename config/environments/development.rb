@@ -6,12 +6,12 @@
 config.cache_classes = false
 
 # Log error messages when you accidentally call methods on nil.
-config.whiny_nils = true
+config.whiny_nils = false
 
 # Show full error reports and disable caching
 config.action_controller.consider_all_requests_local = true
 config.action_controller.perform_caching             = false
-config.action_view.debug_rjs                         = true
+config.action_view.debug_rjs                         = false
 config.action_controller.asset_host                  = "http://localhost:3000"
 
 # needed for Avatar::Source::RailsAssetSource
