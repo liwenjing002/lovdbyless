@@ -26,14 +26,14 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
   
   # Gem dependencies
-  config.gem 'will_paginate', :version => '~> 2.2.2'
-  config.gem 'colored', :version=> '1.1'
-  config.gem 'youtube-g', :version=> '0.4.9.9', :lib=>'youtube_g'
+  config.gem 'will_paginate'
+  config.gem 'colored'
+  config.gem 'youtube-g', :lib=>'youtube_g'
   config.gem 'uuidtools', :version=> '1.0.4'
-  config.gem 'hpricot', :version=> '0.6.164'
-  config.gem 'mocha', :version=> '0.9.3'
-  config.gem 'redgreen', :version=> '1.2.2' unless ENV['TM_MODE']
-  config.gem 'gcnovus-avatar', :version=> '0.0.7', :lib => 'avatar'
+  config.gem 'hpricot'
+  config.gem 'mocha'
+  config.gem 'redgreen' unless ENV['TM_MODE']
+  config.gem 'gcnovus-avatar', :lib => 'avatar'
   
   
   

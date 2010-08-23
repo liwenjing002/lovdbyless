@@ -1,34 +1,34 @@
 <% less_form_for @user, :url => login_path, :method => :post do |f| %>
 
 <div id="login_form">
-  <h1>Log-in your Account</h1>
+  <h1><%= t 'Log-in your Account' %></h1>
 
   <div class="instruction">
-    <%= link_to "Oops, I need an account!", signup_url  %>
+    <%= link_to t("Oops, I need an account!"), signup_url  %>
   </div>
 
-  <%= f.text_field :login, :class => "focus_first" %>
-  <%= f.password_field :password %>
-  <%= f.wrap(:remember_me, :for => :remember_me){ check_box_tag 'remember_me',1,false, :class=>"checkbox" } %>
+  <%= f.text_field :login, :label => t("login"),:class => "focus_first" %>
+  <%= f.password_field :password,:label => t("password") %>
+  <%= f.wrap(:remember_me, :for => :remember_me,:label => t("remember_me")){ check_box_tag 'remember_me',1,false, :class=>"checkbox" } %>
 
   <div class="button">
-    <%= f.submit 'Log-in Now', :class=>'button' %>
+    <%= f.submit t('Log-in Now'), :class=>'button' %>
   </div>
 
 </div>
 
 <div class="instruction">
-  <span>I <span id="forgot_text">forgot</span> my <a href="javascript:void(0);" id="forgot_password_clicker" style="display: inline;">password</a></span>
+  <span><%= t "I forgot my" %><a href="javascript:void(0);" id="forgot_password_clicker" style="display: inline;"><%= t "password" %></a></span>
 </div>
 
 <div id="forgot_form" class="hidden">	
-  <h1>Retrieve My Password</h1>
-  <div class="instruction">Enter email address and your password will be sent to you.</div>
+  <h1><%= t 'Retrieve My Password' %></h1>
+  <div class="instruction"><%= t 'Enter email address and your password will be sent to you' %></div>
   <div id="forgot_password">
-    <%= f.text_field :email, :label => "Enter Email Address" %>
+    <%= f.text_field :email, :label => t("Enter Email Address") %>
   </div>
   <div class="button">
-    <%= f.submit 'Retrieve Password', :class => 'button' %>
+    <%= f.submit t('Retrieve Password'), :class => 'button' %>
   </div>
 </div>
 <% end %>

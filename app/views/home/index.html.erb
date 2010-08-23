@@ -14,20 +14,20 @@
 
   <div>
     <div id="front_left_column" class="left"> 
-      <h2>Latest Comments</h2>
+      <h2><%= t 'Latest Comments' %></h2>
       <%= render :partial => 'comments/comment', :collection => recent_comments %>
       
-       <h2>Newest Forum Topics</h2>
+       <h2><%= t 'Newest Forum Topics' %></h2>
       <%= render :partial => 'forum_topics/new_topic', :collection => recent_forum_posts %>
     </div>
 
     <div id="front_middle_column" class="left"> 
-      <h2>Newest Members</h2>
+      <h2><%= t 'Newest Members' %></h2>
       <%= render :partial => 'profiles/newest_member', :collection => new_members %>
     </div>
 
     <div class="front_right_column right">
-      <h2>Newest Pictures</h2>
+      <h2><%= t 'Newest Pictures' %></h2>
       <% newest_pictures.each do |picture|%>
       <div class="image left small_down_image">
         <div>
