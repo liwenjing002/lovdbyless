@@ -21,7 +21,7 @@ module FileColumn # :nodoc:
     options = defaults.dup
     options[:store_dir] ||= File.join(options[:root_path], model, attr)
     unless options[:store_dir].is_a?(Symbol)
-      options[:tmp_base_dir] ||= File.join(options[:store_dir], "tmp")
+      options[:tmp_base_dir] ||= File.join(options[:store_dir], ".tmp")
     end
     options[:base_url] ||= options[:web_root] + File.join(model, attr)
 
@@ -125,7 +125,7 @@ module FileColumn # :nodoc:
       if options[:tmp_base_dir]
         options[:tmp_base_dir] 
       else
-        dir = File.join(store_dir, "tmp")
+        dir = File.join(store_dir, ".tmp")
         FileUtils.mkpath(dir) unless File.exists?(dir)
         dir
       end
